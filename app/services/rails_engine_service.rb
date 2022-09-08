@@ -9,4 +9,9 @@ class RailsEngineService
     json = JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.one_merchant_data(merchant_id)
+    response = conn.get("/api/v1/merchants/#{merchant_id}")
+    json = JSON.parse(response.body, symbolize_names: true)
+  end
+
 end
